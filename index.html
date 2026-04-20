@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maintenance – sadika.web.id</title>
+  <meta name="description" content="Website sadika.web.id sedang dalam pemeliharaan. Kami akan segera kembali." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0f0f1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #e2e8f0;
+      padding: 2rem;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle var(--d) ease-in-out infinite var(--delay);
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.6; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    .icon-wrap {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 2rem;
+      position: relative;
+    }
+
+    .gear-ring {
+      width: 96px;
+      height: 96px;
+      border: 2px solid #7c3aed;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1e1b4b;
+      animation: spin-slow 12s linear infinite;
+    }
+
+    .gear-inner {
+      width: 56px;
+      height: 56px;
+      border: 2px solid #a78bfa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f0f1a;
+      animation: spin-slow 8s linear infinite reverse;
+    }
+
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .domain {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: #7c3aed;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .desc {
+      font-size: 16px;
+      color: #94a3b8;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .progress-wrap {
+      background: #1e1b4b;
+      border-radius: 99px;
+      height: 6px;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 70%;
+      background: linear-gradient(90deg, #6d28d9, #a78bfa, #7c3aed);
+      background-size: 200% 100%;
+      border-radius: 99px;
+      animation: progress-glow 2.5s ease-in-out infinite;
+    }
+
+    @keyframes progress-glow {
+      0% { background-position: 0% 0%; opacity: 0.8; }
+      50% { background-position: 100% 0%; opacity: 1; }
+      100% { background-position: 0% 0%; opacity: 0.8; }
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e1b4b;
+      border: 1px solid #312e81;
+      border-radius: 99px;
+      padding: 8px 20px;
+      font-size: 13px;
+      color: #a78bfa;
+      margin-bottom: 2.5rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #7c3aed;
+      border-radius: 50%;
+      animation: blink 1.4s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; transform: scale(0.85); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #312e81;
+      margin: 0 auto 2rem;
+    }
+
+    .footer {
+      font-size: 13px;
+      color: #475569;
+    }
+
+    .footer a {
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+  <div class="icon-wrap">
+    <div class="gear-ring">
+      <div class="gear-inner">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <p class="domain">sadika.web.id</p>
+
+  <h1>Sedang Dalam<br>Pemeliharaan</h1>
+
+  <p class="desc">
+    Website kami sedang diperbarui untuk memberikan<br>
+    pengalaman yang lebih baik bagi Anda.<br>
+    Kami akan segera kembali!
+  </p>
+
+  <div class="progress-wrap">
+    <div class="progress-bar"></div>
+  </div>
+
+  <div class="status-badge">
+    <div class="dot"></div>
+    Akan segera hadir kembali
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="footer">
+    &copy; 2025 sadika.web.id &nbsp;·&nbsp; Ada pertanyaan? <a href="mailto:admin@sadika.web.id">Hubungi kami</a>
+  </p>
+</div>
+
+<script>
+  const starsContainer = document.getElementById('stars');
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    const size = Math.random() * 2 + 1;
+    star.className = 'star';
+    star.style.cssText = `
+      width: ${size}px;
+      height: ${size}px;
+      top: ${Math.random() * 100}%;
+      left: ${Math.random() * 100}%;
+      --d: ${2 + Math.random() * 4}s;
+      --delay: ${Math.random() * 4}s;
+    `;
+    starsContainer.appendChild(star);
+  }
+</script>
+
+</body>
+</html>
